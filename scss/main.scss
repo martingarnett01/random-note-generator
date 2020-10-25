@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: #ECEFF1;
+  margin: 0 2em;
+  padding-bottom: env(safe-area-inset-bottom);
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.intro {
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-wrapper {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 1em 0;
+  font-weight: 700;
+  font-size: 2em;
+  
+  br {
+    content: '';
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.note-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chosen-note {
+  text-align: center;
+  font-size: 4rem;
+  width: 50%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4A148C;
+  color: white;
+  border-radius: 999em;
+  flex-grow: 1;
+  width: 8rem;
+  height: 8rem;
+  line-height: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  margin: 1em auto;
+  padding: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  background: #AD1457;
+  color: white;
+  border-radius: 8px;
+  box-shadow: inset 0 -4px 0px #880E4F;
+  transition:  0.2s ease-in-out;
+  transition-property: box-shadow, padding, margin;
+  
+  &:active:hover {
+    margin-top: calc(1em + 4px);
+    padding-top: calc(1em - 2px);
+    padding-bottom: calc(1em - 2px);
+    box-shadow: inset 0 0 0px #0D47A1;
+  }
+  
+  &:hover, &:focus {
+    outline: none;
+    background-color: #C2185B;
+    cursor: pointer;
+  }
+}
+
+.checkbox-wrapper {
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  margin: 1rem 0.2rem;
+  
+  &+label {
+    user-select: none;
+  }
+  
+  &[disabled]+label {
+    opacity: 0.4;
+  }
+}
